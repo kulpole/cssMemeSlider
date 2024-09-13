@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    background: rgba(22, 22, 22, 0.667);
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.container {
+    max-width: 80%;
+    padding: 0 5%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    background: rgba(28, 28, 28, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+    color: aliceblue;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    height: 85%;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+}
+
+.photos {
+    display: flex;
+    overflow: hidden;
+    max-width: 80vw;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 80vw;
+}
+
+.slider-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.signatures {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 20px;
+}
+
+p {
+    margin: 0;
+    color: aliceblue
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 5%;
+    background: rgba(28, 28, 28, 0.2);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .slider-content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .nav{
+        margin: 30px 0;
+    }
+}
