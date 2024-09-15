@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    background: rgba(22, 22, 22, 0.667);
+    background: #555555
 }
 
 a {
@@ -43,23 +43,34 @@ main {
 .slider {
     display: flex;
     flex-direction: column;
+    row-gap: 10px;
+    overflow: hidden;
 }
 
 .photos {
     display: flex;
-    overflow: hidden;
-    max-width: 80vw;
-    border-radius: 10px;
+    width: 400%;
+    height: 100%;
+}
+
+.photo {
+    width: 25%;
+    transition: all 1s;
+}
+
+input {
+    position: absolute;
+    visibility: hidden;
 }
 
 img {
-    max-width: 80vw;
+    width: 100%;
+    height: 100%;
 }
 
 .slider-content {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
 }
 
 .signatures {
@@ -72,6 +83,24 @@ img {
 p {
     margin: 0;
     color: aliceblue
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-element {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #555555;
+    border-radius: 50%;
+    background: #4e83ff;
+    cursor: pointer;
+}
+
+.nav-element:hover {
+    background: #94b4ff;
 }
 
 .footer {
@@ -92,7 +121,23 @@ p {
         align-items: center;
     }
 
-    .nav{
+    .nav {
         margin: 30px 0;
     }
+}
+
+#radio1:checked~.photos .photo1 {
+    margin-left: 0%;
+}
+
+#radio2:checked~.photos .photo1  {
+    margin-left: -25%;
+}
+
+#radio3:checked~.photos .photo1  {
+    margin-left: -50%;
+}
+
+#radio4:checked~.photos .photo1  {
+    margin-left: -75%;
 }
