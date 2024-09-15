@@ -76,13 +76,19 @@ img {
 .signatures {
     display: flex;
     flex-direction: column;
+    height: 140px;
     overflow: hidden;
-    height: 20px;
+}
+
+.signature {
+    color: aliceblue;
+    transition: all 1s;
 }
 
 p {
+    height: 140px;
+    color: aliceblue;
     margin: 0;
-    color: aliceblue
 }
 
 .nav {
@@ -115,7 +121,7 @@ p {
     justify-content: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .slider-content {
         flex-direction: column-reverse;
         align-items: center;
@@ -130,14 +136,30 @@ p {
     margin-left: 0%;
 }
 
-#radio2:checked~.photos .photo1  {
+#radio2:checked~.photos .photo1 {
     margin-left: -25%;
 }
 
-#radio3:checked~.photos .photo1  {
+#radio3:checked~.photos .photo1 {
     margin-left: -50%;
 }
 
-#radio4:checked~.photos .photo1  {
+#radio4:checked~.photos .photo1 {
     margin-left: -75%;
+}
+
+#radio1:checked~.slider-content .signatures .signature1 {
+    margin-top: 0%;
+}
+
+#radio2:checked~.slider-content .signatures .signature1 {
+    margin-top: -140px;
+}
+
+#radio3:checked~.slider-content .signatures .signature1 {
+    margin-top: -280px;
+}
+
+#radio4:checked~.slider-content .signatures .signature1 {
+    margin-top: -420px;
 }
