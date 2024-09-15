@@ -12,7 +12,7 @@ a {
 }
 
 .container {
-    max-width: 80%;
+    max-width: 70%;
     padding: 0 5%;
     margin: 0 auto;
 }
@@ -20,7 +20,7 @@ a {
 .header {
     display: flex;
     align-items: center;
-    height: 10%;
+    height: 5%;
     background: rgba(28, 28, 28, 0.2);
 }
 
@@ -76,13 +76,19 @@ img {
 .signatures {
     display: flex;
     flex-direction: column;
+    height: 140px;
     overflow: hidden;
-    height: 20px;
+}
+
+.signature {
+    color: aliceblue;
+    transition: all 1s;
 }
 
 p {
+    height: 140px;
+    color: aliceblue;
     margin: 0;
-    color: aliceblue
 }
 
 .nav {
@@ -91,6 +97,9 @@ p {
 }
 
 .nav-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     border: 10px solid #555555;
@@ -101,6 +110,15 @@ p {
 
 .nav-element:hover {
     background: #94b4ff;
+}
+
+.nav-element_mark1,
+.nav-element_mark2,
+.nav-element_mark3,
+.nav-element_mark4 {
+    width: 20px;
+    height: 20px;
+    transition: all 0.5s;
 }
 
 .footer {
@@ -115,7 +133,7 @@ p {
     justify-content: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
     .slider-content {
         flex-direction: column-reverse;
         align-items: center;
@@ -126,18 +144,74 @@ p {
     }
 }
 
+@media (max-width: 500px) {
+    .nav-element {
+        width: 25px;
+        height: 25px;
+    }
+
+    .nav-element_mark1,
+    .nav-element_mark2,
+    .nav-element_mark3,
+    .nav-element_mark4 {
+        width: 5px;
+        height: 5px;
+    }
+}
+
 #radio1:checked~.photos .photo1 {
     margin-left: 0%;
 }
 
-#radio2:checked~.photos .photo1  {
+#radio2:checked~.photos .photo1 {
     margin-left: -25%;
 }
 
-#radio3:checked~.photos .photo1  {
+#radio3:checked~.photos .photo1 {
     margin-left: -50%;
 }
 
-#radio4:checked~.photos .photo1  {
+#radio4:checked~.photos .photo1 {
     margin-left: -75%;
+}
+
+#radio1:checked~.slider-content .signatures .signature1 {
+    margin-top: 0%;
+}
+
+#radio2:checked~.slider-content .signatures .signature1 {
+    margin-top: -140px;
+}
+
+#radio3:checked~.slider-content .signatures .signature1 {
+    margin-top: -280px;
+}
+
+#radio4:checked~.slider-content .signatures .signature1 {
+    margin-top: -420px;
+}
+
+#radio1:checked~.slider-content .nav .nav-element .nav-element_mark1 {
+    border-radius: 50%;
+    background: #555555;
+}
+
+#radio1:checked~.slider-content .nav .nav-element .nav-element_mark1 {
+    border-radius: 50%;
+    background: #555555;
+}
+
+#radio2:checked~.slider-content .nav .nav-element .nav-element_mark2 {
+    border-radius: 50%;
+    background: #555555;
+}
+
+#radio3:checked~.slider-content .nav .nav-element .nav-element_mark3 {
+    border-radius: 50%;
+    background: #555555;
+}
+
+#radio4:checked~.slider-content .nav .nav-element .nav-element_mark4 {
+    border-radius: 50%;
+    background: #555555;
 }
